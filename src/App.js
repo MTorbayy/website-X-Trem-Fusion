@@ -7,6 +7,7 @@ import Actions from './Scenes/Actions/Actions'
 import Creations from './Scenes/Creations/Creations'
 import Galery from './Scenes/Galery/Galery'
 import NotFound from './Scenes/NotFound/NotFound'
+import Members from './Scenes/Members/Members'
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/actions" element={<Actions />} />
         <Route path="/creations" element={<Creations />} />
         <Route path="/galery" element={<Galery />} />
+        <Route path="/members" element={<Members />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
