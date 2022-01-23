@@ -116,12 +116,12 @@ export default function Navbar() {
 
         </li>
         <li className="item">
-          <Link
+          <NavLink
           to='/#contact'
           className="link"
           >
             Contact 
-          </Link>
+          </NavLink>
         </li>
       </ul>
 
