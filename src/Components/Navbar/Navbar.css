@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;600&display=swap');
 
 nav {
-    position: absolute;
+    position: fixed;
     top: 0px;
     width: 100%;
-    height: 60px;
+    height: 80px;
     background: #222;
     -ms-overflow-style: none;  
+    transition: top 0.5s;
+    transition-delay: 0.1s;
+}
+
+.nav-hidden {
+    top: -80px;
+    transition: top 0.6s;
+    transition-delay: 0.3s;
 }
 
 .menu {
@@ -37,46 +45,52 @@ nav {
     background: rgba(241,241,241, 0.3);
 }
 
-.x-trem  {
+.subMenu {
     position: absolute;
-    top: 55px;
-    padding-top: 18px;
+    min-width: 130px;
+    top: 65px;
+    padding-top: 29px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     list-style-type: none;
     opacity: 1;
     transition: opacity 0.4s ease-in-out;
+    cursor: pointer;
 }
 
-.x-trem-hidden {
+.subMenu-hidden {
     position: absolute;
-    top: 55px;
-    padding-top: 18px;
+    min-width: 130px;
+    top: 65px;
+    padding-top: 29px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     list-style-type: none;
     opacity: 0;
+    cursor: default;
+    pointer-events: none;
     transition: opacity 0.4s ease-in-out;
 }
 
-.x-trem li, .x-trem-hidden li {
+.subMenu li, .subMenu-hidden li {
     margin-bottom: 20px;
 }
 
 .visible {
     color: #f1f1f1;
+    width: fit-content;
     text-transform: uppercase;
     border-radius: 10px 100px / 120px;
     text-align: center;
     padding: 4px 10px;
     background: rgb(124, 124, 124);
-    cursor: pointer;
     text-decoration: none;
     font-family: 'Teko', sans-serif;
     font-size: 28px;
     transition: 0.2s ease-in-out;
+    
 }
 
 .visible:hover {
@@ -86,5 +100,5 @@ nav {
 .logo {
     position: absolute;
     left: 35px;
-    top: 4px;
+    top: 12px;
 }

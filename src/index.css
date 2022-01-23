@@ -8,3 +8,7 @@ body {
   padding-top: 70px;
   overflow-y: scroll;
 }
+
+body p, h1 {
+  pointer-events: none;
+}
