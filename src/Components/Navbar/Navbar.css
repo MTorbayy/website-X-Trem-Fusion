@@ -1,49 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;600&display=swap');
+
+
 .menu {
     background: #222;
     width: 100%;
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
     transition: 400ms ease-in-out;
 }
 
-.menu:hover {
-    height: 52px;
-}
-
 .item {
-    margin-top: 15px;
+    margin-top: 10px;
     margin-right: 30px;
 }
-
 
 .link {
     text-decoration: none;
     color: #f1f1f1;
     cursor: pointer;
-    padding: 7px;
+    padding: 4px 10px;
+    font-family: 'Teko', sans-serif;
+    font-size: 28px;
     text-transform: uppercase;
     transition: 400ms ease-in-out;
 }
 
-.link:hover {
+.link:hover, .activeLink {
     border-radius: 10px 100px / 120px;
-    border-color: #f1f1f1;
-    border-width: 0.5px;
-    border-style: solid;
-}
-
-.activeLink {
-    border-radius: 10px 100px / 120px;
-    border-color: #f1f1f1;
-    border-width: 0.5px;
-    border-style: solid;
+    background: rgba(241,241,241, 0.3);
 }
 
 .x-trem  {
     position: absolute;
-    top: 65px;
+    top: 75px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -51,31 +42,24 @@
 }
 
 .x-trem li {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .visible {
     color: #f1f1f1;
     text-transform: uppercase;
     border-radius: 10px 100px / 120px;
-    border-color: #f1f1f1;
-    border-width: 0.5px;
-    border-style: solid;
     text-align: center;
-    padding: 7px;
-    background: rgba(0,0,0,0.5);
+    padding: 4px 10px;
+    background: rgb(124, 124, 124);
+    cursor: pointer;
     text-decoration: none;
-    
+    font-family: 'Teko', sans-serif;
+    font-size: 28px;
 }
-
-.visible:first-child {
-
-}
-
-
 
 .logo {
     position: absolute;
-    left: 10px;
-    top: 3px;
+    left: 35px;
+    top: 4px;
 }

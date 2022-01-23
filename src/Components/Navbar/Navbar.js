@@ -1,5 +1,6 @@
 import React from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
+import {HashLink as Link} from 'react-router-hash-link'
 import logo from './logoMains.png'
 import './Navbar.css'
 
@@ -10,17 +11,17 @@ export default function Navbar() {
     return (
   <nav>
       <Link to="/">
-        <img className="logo" src={logo} alt="erreur photo" style={{width: "80px"}} />
+        <img className="logo" src={logo} alt="erreur photo" style={{width: "97px"}} />
       </Link>  
 
       <ul className="menu">
       <li className="item">  
-          <NavLink
-          to="/"
+          <Link
+          to="/#compagnie"
           className="link"
           >
             X-TREM FUSION
-          </NavLink>
+          </Link>
 
           <ul className="x-trem">
             <li><Link to="/" className='visible'>Compagnie</Link></li>
@@ -46,16 +47,16 @@ export default function Navbar() {
           </NavLink>
         </li>
         <li className="item">
-          <NavLink
-          to="/"
+          <Link
+          to='/#contact'
           className="link"
           >
-            Contact
-          </NavLink>
+            Contact 
+          </Link>
         </li>
       </ul>
 
-      
+
       
   </nav>
   )
