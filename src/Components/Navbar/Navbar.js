@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
 import {HashLink as Link} from 'react-router-hash-link'
 import logo from './logoMains.png'
@@ -7,7 +7,13 @@ import './Navbar.css'
 
 export default function Navbar() {
   
-  
+    const [toggle, setToggle] = useState(false)
+
+    useEffect(() => {
+      // Enlever le scroll
+    })
+
+
     return (
   <nav>
       <Link to="/">
@@ -15,16 +21,25 @@ export default function Navbar() {
       </Link>  
 
       <ul className="menu">
+
+        {/* Partie visible */}
       <li className="item">  
           <Link
           to="/#compagnie"
-          className="link"
+          className={toggle ? "link activeLink" : "link"}
+          onMouseEnter={() => setToggle(true)}
+          onMouseLeave={() => setToggle(false)}
           >
             X-TREM FUSION
           </Link>
 
-          <ul className="x-trem">
-            <li><Link to="/" className='visible'>Compagnie</Link></li>
+
+        {/* Partie à faire apparaître */}
+          <ul 
+          onMouseEnter={() => setToggle(true)}
+          onMouseLeave={() => setToggle(false)}
+          className={toggle ? "x-trem" : "x-trem-hidden"}>
+            <li><Link to="/#compagnie" className='visible'>Compagnie</Link></li>
             <li><Link to="/members" className='visible'>Membres</Link></li>
           </ul>
 
