@@ -9,11 +9,6 @@ export default function Navbar() {
   
     const [toggle, setToggle] = useState(false)
 
-    useEffect(() => {
-      // Enlever le scroll
-    })
-
-
     return (
   <nav>
       <Link to="/">
